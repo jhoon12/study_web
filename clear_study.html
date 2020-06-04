@@ -1,0 +1,73 @@
+<!-- <style>
+	.box-container{
+		width: 350px;
+		border: 2px solid #09c;
+		background-color: #d7f5ff;
+	}
+	.box-container .box{
+		width: 80px;
+		height: 40px;
+		border: 2px solid red;
+		background-color: #ffe7d5;
+	}
+</style>
+<div class="box-container">
+	<div class="box" style="float: left">박스1</div>
+	<div class="box" style="float: right">박스2</div>
+	<div style="clear: both"></div>
+</div>
+
+
+<div>박스 아래에 나타나야 하는 내용</div> -->
+<!-- <html>
+<body>
+	<div style="width: 150px; height: 80px; background-color: #d2f4ff; border: 2px solid #09c;">
+		150x80
+	</div>
+	<div style="width: 60px; height: 200px; background-color: #fde6ff; border: 2px solid #90C;">
+		90x120
+	</div>
+</body>
+</html> -->
+<html>
+<head>
+<style>
+	.box-container{
+		display: inline-block;
+		background-color: #d2f4ff;
+		border: 2px solid #09c;
+		margin: 5px 15px;
+	}
+	.box-container div{
+		width: 120px;
+		height: 80px;
+		background-color: #fde6ff;
+		border: 2px solid #90C;
+		font-size: 15px;
+	}
+	#box1{ margin: 10px;  padding: 0; }
+	#box2{ margin: 5px 25px; padding: 0; }
+	#box3{ margin: 0;  padding: 10px 30px 5px; }
+	#box4{ margin: 10px; padding: 10px 20px; }
+	#box5{ margin: 10px 30px 0 50px; padding: 30px 0 }
+</style>
+</head>
+
+<body>
+	<div class="box-container">
+		<div id="box1">m: 10<br>p: 0</div>
+	</div>
+	<div class="box-container">
+		<div id="box2">m: 5 25<br>p: 0</div>
+	</div>
+	<div class="box-container">
+		<div id="box3">m: 0<br>p: 10 30 5</div>
+	</div>
+	<div class="box-container">
+		<div id="box4">m: 10<br>p: 10 20</div>
+	</div>
+	<div class="box-container">
+		<div id="box5">m: 10 30 0 50<br>p: 30 0</div>
+	</div>
+</body>
+</html>

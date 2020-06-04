@@ -1,0 +1,84 @@
+<html>
+<head>
+<style>
+	.box{
+		background-color: #09c;
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+	.hover-box:hover{
+		background-color: orange;
+	}
+    /* focus_input에서 -는 그냥 이름일 뿐인가? */
+	.focus-input:focus{
+		background: red;
+	}
+	.container > div{
+		margin-top: 20px;
+		width: 100px;
+		height: 100px;
+		float: left;
+		background-color: orange;
+	}
+	.container > div:nth-child(2n+1) {
+		background-color: red
+	}
+</style>
+</head>
+<body>
+	<div class="boxhover-box">
+		마우스를 올려보세요.
+	</div>
+	<input class="focus-input" type="text" value="클릭해보세요">
+	<div class="container">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div style="clear: both"></div>
+</body>
+</html><html>
+    <head>
+    <style>
+        .box{
+            background-color: #09c;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .hover-box:hover{
+            background-color: orange;
+        }
+        .focus-input:focus{
+            background: red;
+        }
+        .container > div{
+            margin-top: 20px;
+            width: 100px;
+            height: 100px;
+            float: left;
+            background-color: orange;
+        }
+        .container > div:nth-child(2n+1) {
+            background-color: red
+        }
+    </style>
+    </head>
+    <body>
+        <div class="box hover-box">
+            마우스를 올려보세요.
+        </div>
+        <input class="focus-input" type="text" value="클릭해보세요">
+        <div class="container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div style="clear: both"></div>
+    </body>
+    </html>
