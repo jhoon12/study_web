@@ -23,6 +23,7 @@ function paintToDo(text) {
     }
 
     toDos.push(toDoObj);
+    console.log(toDoObj);
     saveToDos(toDos);
 }
 

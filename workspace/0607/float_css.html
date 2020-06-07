@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .float-frame {
+            background: #eee;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .float-unit {
+            width: 50px;
+            background: #333;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px 0;
+            float: left;/*float속성을 주면 그 크기만큼 공간 할당(원래는 한 블록을 차지), 
+            즉 안드로이드에서 wrap_content와 비슷
+            예를 들어서 left속성을 가지는 요소는 다음에 오는 요소들이 상대적으로 오른쪽에 배치됨
+            원래대로 돌리려먼 clear속성을 부여하면 됨
+            */ 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="float-frame">
+        <div class="float-unit">A</div>
+        <div class="float-unit">B</div>
+        <div class="float-unit">C</div>
+        <div class="float-unit">D</div>
+    </div>
+</body>
+
+</html>
