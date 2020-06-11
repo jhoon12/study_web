@@ -1,0 +1,20 @@
+.title{
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Times New Roman', Times, Arial, Helvetica, sans-serif;
+}
+.input{
+    margin:0 auto;
+    width: 30%;
+    font-family: 'Times New Roman', Times, Arial, Helvetica, sans-serif;
+}
+#delete{
+   background-color: red;
+   
+}   
+#boxCss{
+    padding-top: 10px;
+    margin-left: 40%;
+    
+
+}

@@ -38,7 +38,7 @@ function handleSubmit(event) {
 
 function loadToDolist() {
     const getList = JSON.parse(localStorage.getItem(TODOS_LS));
-    if(getList === null){
+    if(getList === null){   
 
     }else{
         getList.forEach(function(todo){

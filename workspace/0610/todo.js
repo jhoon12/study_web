@@ -4,23 +4,46 @@ const toDoForm = document.querySelector(".js-toDoFrom"),
 
 const TODOS_LS = 'toDos';
 
-const toDos = [];
+let toDos = [];
+
+
+
+function deleteToDo(event){
+   const btn = event.target;
+   const li = btn.parentNode;
+   toDoList.removeChild(li);
+
+   const cleanToDos =toDos.filter(function(toDo){
+       return toDo.id !== parseInt(li.id);
+   });
+   toDos=cleanToDos;
+   saveToDos();
+}
+
+function saveToDos(){
+    localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+}
 
 function paintToDo(text){
    const li = document.createElement("li");
    const delBtn = document.createElement("button");
    const span = document.createElement("span");
+   const newId = toDos.length +1;
    delBtn.innerText = "X";
-   span.innerText = text;
+   delBtn.addEventListener("click", deleteToDo);
+   //deleteToDo함수 호출
+   span.innerText = text;//입력받은값
    li.appendChild(span);
    li.appendChild(delBtn);
+   li.id = newId;//id값 정수로 지정
    toDoList.appendChild(li)
    const toDoObj = {
        text : text,
-       id: toDos.length +1,//길이 측정
+       id :newId
 
    };
    toDos.push(toDoObj);
+   saveToDos();
 }
 
 function handleSubmit(event){
@@ -35,12 +58,16 @@ function loadToDos(){
     const loadedToDo = localStorage.getItem(TODOS_LS);
     
     if(loadedToDo !== null){
-        //아무것도 실행 안함
-    }
+        const parsedToDos = JSON.parse(loadedToDo);
+        parsedToDos.forEach(function(toDo){
+          paintToDo(toDo.text);
+        });
+    }    
 }
+
 
 function init(){
     loadToDos();
-    toDoForm.addEventListener("submit", handleSubmit)
+    toDoForm.addEventListener("submit", handleSubmit);
 }
 init();
