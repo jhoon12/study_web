@@ -26,7 +26,7 @@ function toDOInput(text){
     li.appendChild(span);
     li.appendChild(deleteBtn);
     box.appendChild(li);
-    TODOLIST.appendChild(box);
+   TODOLIST.appendChild(box);
     box.id='boxCss';
     li.id = newId;
     const ToDoObj = {
@@ -40,9 +40,11 @@ function toDOInput(text){
 }
 
 function Delete(event){
+    console.log('delete');
     const last = event.target;
     const li = last.parentNode;
-    TODOLIST.removeChild(li);
+    const box = li.parentNode;
+    TODOLIST.removeChild(box);
 }
 
 
