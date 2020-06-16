@@ -22,7 +22,7 @@ function toDOInput(text){
     span.innerText = text;
     deleteBtn.innerText='X';
     deleteBtn.id="delete";
-    deleteBtn.addEventListener("click", Delete);
+    deleteBtn.addEventLisetner("click", Delete);
     li.appendChild(span);
     li.appendChild(deleteBtn);
     box.appendChild(li);
