@@ -1,3 +1,5 @@
+const { default: Axios } = require("axios");
+
 const id = document.getElementById("login");
 const password = document.getElementById("password");
 const btn1 = document.getElementById("btn1");
@@ -27,7 +29,7 @@ btn1.onclick = ()=>{
         console.log(res);
       }
 
-      promise({
+      Axios({
         url: 'http://10.156.145.141:3000',
         method: 'post',
         data: {
