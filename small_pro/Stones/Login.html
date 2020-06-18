@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="StonesCSS.css" />
+    <title>Login</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <style>
-        body{text-align: center; }
-
+        body {
+            background-color: blue;
+            text-align: center;
+        }
+        form{
+            display: block;
+        }
+        .InputSize{
+            margin-top: 10px;
+            width: 400px;
+            height: 70px;
+            padding-left: 10px;
+        }
+        
     </style>
 </head>
+
 <body>
     <h1>
         로그인
         <br>
-        <br> 
+        <br>
     </h1>
     <form>
-        <input type="text" placeholder="아이디" id="Id">
+        <div><input  type="text" class="InputSize" placeholder="아이디" id="Id"></div>
+        <div><input type="password" class="InputSize" placeholder="비밀번호" id="password"></div>
+        <div><button id="Login" class="InputSize"  >로그인</button></div>
+        <div><button id="signUp"  class="InputSize">회원가입</button></div>
     </form>
-    <form>
-        <input type="password" placeholder="비밀번호" id="password">
-    </form>
-    <button id="Login">
-        로그인
-    </button>
-    <button id="signUp">
-        회원가입
-    </button>
-    <script  src="Login.js"></script>
+    <script src="Login.js"></script>
 </body>
+
 </html>
