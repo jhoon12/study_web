@@ -4,6 +4,7 @@ const form = document.getElementById("signupForm");
 
 form.onsubmit = async(e) => {
     e.preventDefault();
+//   location.href='./mainUI.html';
     try { 
         const username=id.value;
         const passwordValue=password.value;

@@ -13,9 +13,9 @@ body{
   #slide ul:after{content:"";display:block;clear:both;}
   #slide li{float:left;width:25%;height:100%;}
   #slide li:nth-child(1){background:#faa;}
-  #slide li:nth-child(2){background:#ffa;}
-  #slide li:nth-child(3){background:#faF;}
-  #slide li:nth-child(4){background:#aaf;}
+  #slide li:nth-child(2){background:#faa;}
+  #slide li:nth-child(3){background:#faa;}
+  #slide li:nth-child(4){background:#faa;}
   #slide input{display:none;}
   #slide label{display:inline-block;vertical-align:middle;width:10px;height:10px;border:2px solid #666;background:#fff;transition:0.3s;border-radius:50%;cursor:pointer;}
   #slide .pos{text-align:center;position:absolute;bottom:10px;left:0;width:100%;text-align:center;}
