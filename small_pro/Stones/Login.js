@@ -5,14 +5,13 @@ const password = document.getElementById("password")
 const Login = document.getElementById("Login");
 
 
-
-Login.onsubmit= async (e) => {  
+Login.onclick= async (e) => {  
     e.preventDefault();
 
     try { 
         const res = await axios({
             method: 'post',
-            url: 'http://10.156.145.141:3000/api/auth/login',
+            url: 'http://13.209.77.9:3000/api/auth/login',
             data: {
                 username: Id.value,
                 password: password.value
