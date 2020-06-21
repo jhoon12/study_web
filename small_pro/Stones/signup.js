@@ -17,6 +17,7 @@ form.onsubmit = async(e) => {
             }
         })
         alert("계정 생성 완료");
+        window.location.href = "./Login.html";
     } catch(err) {
         console.log(err);
     }

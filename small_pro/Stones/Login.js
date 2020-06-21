@@ -2,12 +2,10 @@
 
 const Id = document.getElementById("Id");
 const password = document.getElementById("password")
-const Login = document.getElementById("Login");
+const form = document.getElementById("form");
 
-
-Login.onclick= async (e) => {  
+form.onsubmit = async (e) => {  
     e.preventDefault();
-
     try { 
         const res = await axios({
             method: 'post',
@@ -17,6 +15,8 @@ Login.onclick= async (e) => {
                 password: password.value
             }
         })
+        const token = res.data.token;
+        localStorage.setItem("token",res.data.token);
         if(res.status === 200) {
             window.location.href = "./mainUI.html";
         }
