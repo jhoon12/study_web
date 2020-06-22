@@ -1,0 +1,73 @@
+.main{
+    border-color: black;
+    border:0px solid black;
+    height: 700px;
+    width: 500px;
+    margin-top: 30px;
+    border-radius: 16px;
+    background-color: white;
+    
+}
+.text{
+    margin-top: 38px;
+    margin-left: 20px;
+    text-align: left;
+    font-size: 36px;
+
+}
+
+#time{
+    font-weight:bold;
+}
+
+body {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    height:100vh;
+}
+.position{
+    /* skyblue */
+    margin-left: 20px;
+}
+#yo{
+    color: #868e96;
+}
+#today{
+    margin-top: 30px;
+color: #20c997;
+}
+#btn{
+    background-color:#38D9A9;
+    border-radius: 50%;
+    height: 100px;
+    width:100px;
+    color:white;
+    border:0px;
+    font-size:85px;
+    margin-left: 40%;
+    position: absolute;
+    top:885px;
+    left:180px;
+}
+
+.delete{
+    width:70px;
+    height:70px;
+    border:none;
+    background:url("https://previews.123rf.com/images/captainvector/captainvector1705/captainvector170504910/77254732-%EC%93%B0%EB%A0%88%EA%B8%B0%ED%86%B5.jpg") no-repeat;
+    background-size:cover;
+}
+
+#list > li {
+    display:flex;
+    align-items: center;;
+}
+
+#list > li > span {
+    flex:1;
+    box-sizing: border-box;
+    display:block;
+    padding-left:20px;
+}

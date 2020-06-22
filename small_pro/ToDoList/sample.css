@@ -1,0 +1,139 @@
+body {
+    background-color: #e9ecef;
+    padding:0;
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.todo-wrap {
+    width: 512px;
+    height: 768px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.04);
+    margin: 0 auto;
+    margin-top: 96px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-header {
+    padding-top: 48px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.todo-header h1 {
+    margin:0;
+    font-size:36px;
+    color:#343a40;
+}
+
+.day {
+    margin-top: 4px;
+    color: #868e96;
+    font-size: 21px;    
+}
+
+.todo-count {
+    color: #20c997;
+    font-size: 18px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.todo-body {
+    flex:1;
+    padding: 20px 32px;
+    padding-bottom: 48px;
+    overflow-y: auto;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transition:0.25s all;
+}
+
+.todo-item-header-ico {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ced4da;
+    margin-right: 20px;
+    cursor: pointer;
+    outline:none;
+}
+
+.todo-item-header-ico svg {
+    display:none;
+}
+
+.todo-item.active .todo-item-header-ico {
+    border: 1px solid #38d9a9;
+    color: #38d9a9;
+}
+.todo-item.active .todo-item-header-ico svg {
+    display:block;
+}
+
+.todo-item-body {
+    flex: 1;
+    font-size: 21px;
+    color: #495057;
+    
+}
+
+.todo-item.active .todo-item-body {
+    color:#ced4da;
+}
+
+.todo-item-delete-ico {
+    font-size: 24px;
+    cursor: pointer;
+    color: #dee2e6;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.todo-item:hover .todo-item-delete-ico {
+    display:flex;
+}
+
+.addBtn {
+    background: #38d9a9;
+    cursor: pointer;
+    z-index: 5;
+    width: 80px;
+    height: 80px;
+    transform: translateY(40px);
+    color:white;
+    font-size:60px;
+    border-radius:50%;
+    outline: none;
+    border:none;
+    vertical-align: middle;
+    transition:0.25s all;
+}
+.addBtn:hover {
+    background: #63e6be;;
+}
+
+.addBtn svg {
+    transform: translateY(5px);
+}
+
+.btnWrap {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -40,7 +40,6 @@ function paintToDo(text){
    const toDoObj = {
        text : text,
        id :newId
-0
    };
    toDos.push(toDoObj);
    saveToDos();
