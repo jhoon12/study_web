@@ -3,7 +3,7 @@ const todoBody = document.querySelector('.todo-body');
 
 
 window.onload = function(){
-    const dayArray = ["일","월","화","수","목","금","토"];
+    const dayArray = /["일","월","화","수","목","금","토"];
     const now = new Date();
 
     const year = now.getFullYear();

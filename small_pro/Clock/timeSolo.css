@@ -1,0 +1,47 @@
+#back{
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    height:100vh;
+}
+#block{
+    /* width: 300px; */
+    width:40vw;
+    height:70vh;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#second {
+    background-color: red;
+    height: 200px;
+    width: 10px;
+    /* transform: translateY(-100px); */
+    position: absolute;
+}
+
+#minute{
+    background-color: blue;
+    height: 100px;
+    width: 10px;
+    /* transform: translateY(-150px); */
+    position: absolute;
+    transform: rotate(30deg );
+}
+#second,#hour,#minute {
+    transform-origin:30% 50%;
+}
+#hour{
+    background-color: green;
+    height: 50px;
+    width: 10px;
+    position: absolute;
+}
+.timeNumber{
+    height: 80PX;
+    color:white;
+}

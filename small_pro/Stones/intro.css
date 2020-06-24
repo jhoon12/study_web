@@ -34,7 +34,7 @@ body{
     align-items: center;
   
   } */
-  html, body{
+  /* html, body{
     height: 100%;
     width: 100%;
 }
@@ -48,5 +48,52 @@ div {
   display:flex;
   justify-content: center;
   align-items: center;
+*/
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+} 
+.swiper-slide {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
 
+body {
+  background-color: pink;
+}
+
+
+#popup {
+  opacity:0;
+  top:30%;
+  position: absolute;
+  background-color: red;
+  display: block;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  margin-left: -50px;
+  bottom: 0px;
+}
+
+#popup.active {
+  animation-name:active;
+  animation-direction : normal;
+  animation-duration:2s;
+  animation-delay: 0.05s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes active {
+  0% {
+     opacity: 0;
+ }
+  100% {
+    opacity: 1;
+  }
 }

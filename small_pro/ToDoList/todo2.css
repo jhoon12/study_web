@@ -1,12 +1,13 @@
 .main{
     border-color: black;
     border:0px solid black;
-    height: 700px;
-    width: 500px;
+    height: 900px;
+    width: 700px;
     margin-top: 30px;
     border-radius: 16px;
     background-color: white;
-    
+    display: flex;
+    flex-direction: column; 
 }
 .text{
     margin-top: 38px;
@@ -46,18 +47,21 @@ color: #20c997;
     color:white;
     border:0px;
     font-size:85px;
-    margin-left: 40%;
-    position: absolute;
-    top:885px;
-    left:180px;
+    /* transition:0.25s all; */
+    transform: translateY(50px);
 }
 
-.delete{
+.delete{   
     width:70px;
     height:70px;
     border:none;
     background:url("https://previews.123rf.com/images/captainvector/captainvector1705/captainvector170504910/77254732-%EC%93%B0%EB%A0%88%EA%B8%B0%ED%86%B5.jpg") no-repeat;
     background-size:cover;
+    opacity:0;
+}
+
+#list > li:hover > .delete {
+    opacity: 1;
 }
 
 #list > li {
@@ -70,4 +74,14 @@ color: #20c997;
     box-sizing: border-box;
     display:block;
     padding-left:20px;
+}
+
+#body {
+    overflow:auto;
+}
+
+#tail {
+    display:flex;
+    justify-content: center;
+    align-items:center;
 }

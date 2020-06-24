@@ -53,30 +53,19 @@
     }
   </style>
 </head> 
+<div id="popup"></div>
 <body class="font">
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        저희는 당신에게 작은 돌멩이를 드립니다.<br>
-        <br>
-      </div>
-      <div class="swiper-slide">
-        이 돌멩이는 당신이 작성한 목표를 이룰 수 있도록 도와줍니다.<br>
-      </div>
-      <div class="swiper-slide">
-        그리고 당신이 계획을 이루면 이 돌멩이는 점점 더 가꾸어집니다<br>
-      </div>
-      <div class="swiper-slide">
-        자 여기 당신을 위한 작은 돌멩이가 있습니다(돌멩이 띄우며)
-      </div>
-      <div class="swiper-slide">
-        당신의 돌멩이는 어떤 잠재력을 지니고 있나요?<br>
-      </div>
+      <div class="swiper-slide">저희는 당신에게 작은 돌멩이를 드립니다.</div>
+      <div class= "swiper-slide">이 돌멩이는 당신이 작성한 목표를 이룰 수 있도록 도와줍니다.</div>
+      <div class="swiper-slide">그리고 당신이 계획을 이루면 이 돌멩이는 점점 더 가꾸어집니다</div>
+      <div class="swiper-slide" id="img">자 여기 당신을 위한 작은 돌멩이가 있습니다(돌멩이 띄우며) </div>
+      <div class="swiper-slide">당신의 돌멩이는 어떤 잠재력을 지니고 있나요?</div>
     </div>
       <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
- 
+      <div class="swiper-button-prev" id="before" data-value="-1"></div>
+      <div class="swiper-button-next" id="next" data-value="1"></div>
   </div>
   
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
