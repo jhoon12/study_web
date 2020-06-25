@@ -1,8 +1,13 @@
 function nextPage(e){
   count = count + parseInt(e.target.dataset.value);
+  console.log(count);
   if(count === 3) {
     popup.classList.add("active");
-  } else {
+  } 
+  else if(count == 5  ){
+    location.href="./goal.html";
+  }
+  else {
     popup.classList.remove("active");
   } 
 }
@@ -14,13 +19,14 @@ navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',  
   },
-// 현재 페이지를 나타내는 점이 생깁니다. 클릭하면 이동합니다.
+  // 현재 페이지를 나타내는 점이 생깁니다. 클릭하면 이동합니다.
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
     clickable : true
-  }
-})  ;
+  },
+  simulateTouch:false
+});
 
 let count = 0;
 
