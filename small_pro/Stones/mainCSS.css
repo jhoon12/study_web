@@ -1,0 +1,7 @@
+body{
+    height: 100ch;
+}
+#body{
+    height: 50vh;
+    background-color: #5D5F9B;
+}

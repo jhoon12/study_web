@@ -30,10 +30,12 @@ btn.onclick = async function(){
         method:'post',
         url: 'http://13.209.77.9:3000/api/auth/register',
         data : {
+            do : goal,
             year : year,
             month : month,
             day : day,
-            do : goal,
+            time : time,
+            minute : minute 
         }
         })
         console.log('전송완료');
@@ -42,3 +44,6 @@ btn.onclick = async function(){
     }
  
 };
+function arr({
+    
+})
