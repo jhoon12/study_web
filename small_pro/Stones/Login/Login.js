@@ -18,7 +18,7 @@ form.onsubmit = async (e) => {
         const token = res.data.token;
         localStorage.setItem("token",res.data.token);
         if(res.status === 200) {
-            window.location.href = "./mainUI.html";
+            window.location.href = "../Main/mainUI.html";
         }
     } catch (err) {
         if(err.response.status === 403) 

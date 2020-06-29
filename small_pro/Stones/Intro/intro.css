@@ -69,13 +69,16 @@ body {
 * {
   outline:none;
 }
-
+.font{
+  font-family: 'Gaegu', cursive;
+  font-size: 3rem;
+}
 
 #popup {
   opacity:0;
   top:30%;
   position: absolute;
-  background-image: url("stones.png");
+  background-image: url("../Img/stones.png");
   background-size: contain;
   width: 120px;
   height: 90px;

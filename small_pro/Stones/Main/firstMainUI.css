@@ -1,0 +1,130 @@
+html,body{
+    margin: 0;;
+    height: 100%;
+    width: 100%;
+}
+#body{
+    width: 100%;
+    height: 100%;
+    background-color: #5D5F9B;
+    }
+
+    #mainBar{
+    display: flex;
+    padding-top: 3%;
+    }
+
+    #mainBar > #smallStones{
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 50px;
+    height: 30px;
+    }
+
+    #mainBar > #mainBarText{
+    color:white;
+    font-size: 40px;
+    }
+
+    #mainBar > #textQuestion{
+    margin-left: 1%;
+    margin-top: 30px;
+    color:white;    
+    }
+
+#mainBar-menu{
+    padding-top: 1%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-left: 30%;
+    flex : 6;
+    font-size:20px
+}
+
+#mainBar-menu > #mypage{
+    flex:1.2
+}
+
+#mainBar-menu > #setting{
+    flex:0.9
+}
+
+#mainBar-menu > #login{
+    
+    flex:1;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: white;
+}
+
+#centerImg{
+    width:20%;
+    height:30%;
+    display: flex;
+    margin: 0 auto;
+    padding-left: 3%;
+    margin-top:8%;
+}
+    #stonesExpression{
+        flex:1;
+        margin-top:5%;
+        padding-left: 3%;
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        background-size: cover;
+    }
+
+#tail{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+    #firstLoginClockBox{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+        #firstLoginClockBox >#firstLoginClockText{
+            display: flex;
+            flex-direction: column;
+            font-size: 40px;
+            align-items: center ;
+            margin-top: 30%;
+            color:#5D5F9B;
+        }
+
+        #firstLoginClockPosition{
+            display: flex;
+            justify-content: center;
+        }
+
+        #firstLoginClockPosition > #firstLoginClockImg{
+            width: 80%;
+            height: 90%;
+        }
+    #firstLoginPlannerBox{
+        width: 50%;
+        background-color: #ECECEC;
+        
+    }
+
+        #firstLoginPlannerBox > #firstLoginPlannerBoxImg{ 
+            display: block;
+            margin: 0 auto;
+            height: 50%;
+            width: 80%;
+            margin-bottom: 10%;
+        }
+        
+        #firstLoginPlannerBox > #firstLoginPlannerBoxText{
+            display: block;
+            text-align: center;
+            height: 40%;
+            width: 100%;
+            font-size: 40px;
+            color:#5D5F9B;  
+        }

@@ -5,7 +5,7 @@ function nextPage(e){
     popup.classList.add("active");
   } 
   else if(count == 5  ){
-    location.href="./goal.html";
+    location.href="../Goal/goal.html";
   }
   else {
     popup.classList.remove("active");

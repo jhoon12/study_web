@@ -44,6 +44,3 @@ btn.onclick = async function(){
     }
  
 };
-function arr({
-    
-})
