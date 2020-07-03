@@ -1,5 +1,3 @@
-// const { default: Axios } = require("axios");
-
 const Id = document.getElementById("Id");
 const password = document.getElementById("password")
 const form = document.getElementById("form");
@@ -18,7 +16,7 @@ form.onsubmit = async (e) => {
         const token = res.data.token;
         localStorage.setItem("token",res.data.token);
         if(res.status === 200) {
-            window.location.href = "../Main/mainUI.html";
+            window.location.href = "../Main/LoginStateMainUI.html";
         }
     } catch (err) {
         if(err.response.status === 403) 

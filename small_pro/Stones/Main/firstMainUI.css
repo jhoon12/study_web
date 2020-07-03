@@ -2,6 +2,8 @@ html,body{
     margin: 0;;
     height: 100%;
     width: 100%;
+    font-family: 'Noto Sans CJK KR', cursive;
+
 }
 #body{
     width: 100%;
@@ -18,9 +20,10 @@ html,body{
     margin-top: 20px;
     margin-left: 10%;
     width: 50px;
-    height: 30px;
-    }
-
+    height: 35px;
+    padding-right: 1%;
+    
+}
     #mainBar > #mainBarText{
     color:white;
     font-size: 40px;
@@ -51,10 +54,11 @@ html,body{
 }
 
 #mainBar-menu > #login{
-    
-    flex:1;
+    text-align: center;
+    width: 100px;
+    margin-right: 100px;
     border-style: solid;
-    border-radius: 50%;
+    border-radius: 30px;
     border-color: white;
 }
 
@@ -88,18 +92,26 @@ html,body{
         flex-direction: column;
     }
     
-        #firstLoginClockBox >#firstLoginClockText{
+        #firstLoginClockBox >#firstLoginClockTitle{
             display: flex;
             flex-direction: column;
-            font-size: 40px;
-            align-items: center ;
-            margin-top: 30%;
+            font-size: 30px;
+            align-items: center;
+            margin-top: 15%;
             color:#5D5F9B;
+            margin-bottom: 5%;
+        }
+        
+        #firstLoginClockBox > .firstLoginClockText{
+            font-size: 25px;
+            display: flex;
+            justify-content: center; 
         }
 
         #firstLoginClockPosition{
             display: flex;
             justify-content: center;
+            padding-top:5%
         }
 
         #firstLoginClockPosition > #firstLoginClockImg{
@@ -120,11 +132,16 @@ html,body{
             margin-bottom: 10%;
         }
         
-        #firstLoginPlannerBox > #firstLoginPlannerBoxText{
+        #firstLoginPlannerBox > #firstLoginPlannerBoxTitle{
             display: block;
             text-align: center;
-            height: 40%;
             width: 100%;
             font-size: 40px;
-            color:#5D5F9B;  
+            color:#5D5F9B;
+            margin-bottom: 5%;  
+        }
+        #firstLoginPlannerBox > .firstLoginPlannerBoxText{
+            font-size:30px;
+            display: flex;
+            justify-content: center;
         }
