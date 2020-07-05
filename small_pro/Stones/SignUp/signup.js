@@ -17,7 +17,7 @@ form.onsubmit = async(e) => {
             const passwordValue=password.value;
             const res = await axios({
                 method:'post',
-                url: 'http://13.209.77.9:3000/api/auth/register',
+                url: `${CONSTANT.SERVER_ADRESS}/user/register`,
                 data: {
                     username : username,
                     password:passwordValue,
