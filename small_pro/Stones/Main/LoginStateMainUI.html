@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="LoginStateMainUI.css" />
     <link rel="stylesheet" href="../font.css">
+    <script src="../Const.js"></script>
     <title>LoginStateMainUI</title>
 </head>
 <body class="font">
@@ -14,9 +15,9 @@
                 <div id="mainBarText">돌멩이</div>
                 <div id="textQuestion">당신의 돌멩이는 무엇인가요?</div>    
                 <div id="mainBar-menu"> 
-                    <div id="mypage">마이페이지</div>
+                    <div id="mypage" onclick="location.href='../mainBar/mypage.html'">마이페이지</div>
                     <div id="setting">설정</div>
-                    <div id="login">로그인</div>
+                    <div id="login">로그아웃</div>
                 </div>
 
         </div>
@@ -26,7 +27,24 @@
     </div>
     
     <div id="tail">    
-        <div></div>
+        <div id="firstLoginClockBox">
+            <div id="TextBox">
+                <div id="NameText"></div>
+                <div id="TimeText"></div>
+            </div>
+          <div id="firstLoginClockPosition">
+                <img src="../Img/firstLoginClock.png" id="firstLoginClockImg">
+            </div>
+    </div>
+    <div id="firstLoginPlannerBox">
+        <img src="../Img/firstLoginPlanner.png" id="firstLoginPlannerBoxImg">
+        <div id="todayText">오늘의 계획</div>
+        <div id="planBox">
+            <table>
+            </table>
+            <button id="success">완료하기</button>
+        </div>
+    </div>
     </div>
     <script src="LoginStateMainUI.js"></script>
 </body>

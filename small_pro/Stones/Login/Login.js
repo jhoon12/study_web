@@ -15,15 +15,18 @@ form.onsubmit = async (e) => {
                 password: password.value
             }
         })
+        console.log(res);           
         localStorage.setItem("access_token",res.data.access_token);
         localStorage.setItem("refresh_token",res.data.refresh_token);
-        if(res.status === 200) {
-            window.location.href = "../Main/LoginStateMainUI.html";
+        if(res.status === 201) { 
+            window.location.href = "../Intro/intro.html";
         }
+        if (res.status === 200)
+        window.location.href = "../Main/LoginStateMainUI.html";
     } catch (err) {
         if(err.response.status === 403) 
             alert("입력정보가 틀렸습니다!");
-    }      
+    }                        
  }
 
 
