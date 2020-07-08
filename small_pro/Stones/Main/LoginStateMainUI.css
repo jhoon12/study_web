@@ -51,9 +51,10 @@ html,body{
     flex:0.9
 }
 
-#mainBar-menu > #login{
+#mainBar-menu > #logout{
     text-align: center;
     width: 100px;
+    padding-top: 3px;
     margin-right: 100px;
     border-style: solid;
     border-radius: 30px;
@@ -107,7 +108,7 @@ html,body{
         #firstLoginPlannerBox{
             width: 50%;
             background-color: #ECECEC;
-            
+            padding-bottom: 50px;
         }
     
             #firstLoginPlannerBox > #firstLoginPlannerBoxImg{ 
@@ -133,7 +134,7 @@ html,body{
             }
             #NameText{
                 font-size: 50px;
-                padding-right: 350px;
+                padding-right: 380px;
             }
             #TimeText{
         
@@ -146,5 +147,82 @@ html,body{
                 border-color: #5D5F9B;
                 border-radius: 5px;
                 margin : 0 auto;
-                display: block;   
+                display: block;
+                margin-top: 5px;  
+               
             }
+#planBox{
+    margin-top: 20px;
+    height: 45%;
+    padding-left: 50px;
+    display: flex;
+    flex : 2;
+}        
+
+#planBox>#ToDo1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex : 1;
+    
+    
+}
+
+#planBox>#ToDo2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex : 1;
+}
+
+.cell > .toDoCheck{
+    height: 26px;;
+    width: 26px;
+    border-radius: 0em;
+    margin-right: 20px;
+    background-color: white;
+    border-color: #5D5F9B;
+    border-style: solid;
+
+}
+.cell{
+    display: flex;
+    align-items:center;
+    margin-bottom: 10px;
+
+}
+
+.todo {
+    display:flex;
+    padding-top: 25px;
+}
+
+.toDoCheck.active {
+    background-color: #5D5F9B;
+}
+.input::placeholder {
+   color: #5D5F9B;
+   letter-spacing: 20px;
+   font-weight: bolder;
+   font-size:20px;
+   height:30px;
+}
+.input{
+    height: 40px;
+    width: 180px;
+    border : 0px solid ;
+    background-color: #ECECEC;
+    margin-bottom: 18px;
+ 
+
+}
+input:focus {
+    outline:none;
+    
+}
+#todayText{
+    font-size: 30px;
+    color: #5D5F9B;
+}

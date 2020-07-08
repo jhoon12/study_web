@@ -56,6 +56,7 @@ html,body{
 #mainBar-menu > #login{
     text-align: center;
     width: 100px;
+    padding-top: 3px;
     margin-right: 100px;
     border-style: solid;
     border-radius: 30px;

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" type="text/css" href="LoginStateMainUI.css" />
     <link rel="stylesheet" href="../font.css">
     <script src="../Const.js"></script>
@@ -17,7 +18,7 @@
                 <div id="mainBar-menu"> 
                     <div id="mypage" onclick="location.href='../mainBar/mypage.html'">마이페이지</div>
                     <div id="setting">설정</div>
-                    <div id="login">로그아웃</div>
+                    <div id="logout">로그아웃</div>
                 </div>
 
         </div>
@@ -40,10 +41,60 @@
         <img src="../Img/firstLoginPlanner.png" id="firstLoginPlannerBoxImg">
         <div id="todayText">오늘의 계획</div>
         <div id="planBox">
-            <table>
-            </table>
-            <button id="success">완료하기</button>
-        </div>
+                <div id="ToDo1">
+                    <div class="cell">
+                        <div class="toDoCheck"></div>
+                        <div class="todo">
+                            <input type="text" class="input" placeholder="ㅡㅡㅡㅡ" >
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="toDoCheck" ></div>
+                        <div class="todo">
+                            <input type="text" class="input" placeholder="ㅡㅡㅡㅡ" >
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="toDoCheck" ></div>
+                        <div class="todo">
+                            <input type="text" class="input" placeholder="ㅡㅡㅡㅡ" >
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="toDoCheck" ></div>
+                        <div class="todo">
+                            <input type="text" class="input" placeholder="ㅡㅡㅡㅡ" >
+                        </div>
+                    </div>
+                </div>
+                <div id="ToDo2">
+                    <div class="cell">
+                        <div class="toDoCheck" ></div>
+                        <div class="todo">
+                            <input type="text" class="input" placeholder="ㅡㅡㅡㅡ" >
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="toDoCheck"></div>
+                        <div class="todo">
+                            <input type="text" class="input" placeholder="ㅡㅡㅡㅡ" >
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="toDoCheck"></div>
+                        <div class="todo">
+                            <input type="text" class="input" placeholder="ㅡㅡㅡㅡ" >
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="toDoCheck"></div>
+                        <div class="todo">
+                            <input type="text" class="input" placeholder="ㅡㅡㅡㅡ" >
+                        </div>
+                    </div>
+                </div>  
+        </div>       
+        <button id="success">완료하기</button>
     </div>
     </div>
     <script src="LoginStateMainUI.js"></script>
