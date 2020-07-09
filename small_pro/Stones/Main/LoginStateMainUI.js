@@ -4,35 +4,23 @@ const TimeText = document.getElementById("TimeText");
 const stonesExpression = document.getElementById("stonesExpression");
 const logout = document.getElementById("logout");
 const todo = document.getElementById("todo");
-document.querySelectorAll(".input").forEach(elemenst =>elemenst.onclick = style);
+let arr = [];
 document.querySelectorAll(".toDoCheck").forEach(element => element.onclick = changeStyle);
-document.getElementById("success").onclick = addPlan;
+document.getElementById("success").onclick = submitPlan;
+document.querySelector(".input").forEach(element => addPlan)
 
-function style(){
-    this.type = input;
-}
+async function submitPlan(){
+  const res = await axios({
+    method : 'get',
+    url : `${CONSTANT.SERVER_ADRESS}/main`,
+    body:{
 
-function addPlan(){
-  const promise = (bool)=>{
-    return new Promise((resolve,reject)=>{
-        if(bool){
-            resolve()
-        }
-        else{
-          reject()
-        }
-    })
-  }
-  promise(true).then(()=>{ 
-    const res = axios({
-      method : 'get',
-      url : `${CONSTANT.SERVER_ADRESS}/main`,
-      body:{
-
-      }
-    });
-  }).catch(()=>{console.log("씨발")})
+    }
+  });
 } 
+function addPlan(){
+  
+}
 
 function changeStyle() {
   this.classList.toggle("active");//클래스가 있으면 추가, 없으면 추가 X
