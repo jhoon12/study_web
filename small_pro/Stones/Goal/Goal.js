@@ -5,37 +5,30 @@ const setTime = document.getElementById("SetTime");
 const btn = document.getElementById("btn");
 
 
-// let arr = new Array();
-// const date = term.value;
-// arr = date.split("-");
 btn.onclick = async function(){
-    const date = term.value;
     const setTime = SetTime.value;
-    
     const goal = Goal.value;
 
-    let dateArr = new Array();
-    dateArr = date.split("-");
-        const year = dateArr[0];
-        const month = dateArr[1];
-        const day = dateArr[2];
+    const todayKorean = new Date();
+    const today = new Date(todayKorean.getFullYear(),todayKorean.getMonth()+1,todayKorean.getDate());
 
-    let timeArr = new Array();
-        timeArr = setTime.split(":");
-        const time = timeArr[0];
-        const minute = timeArr[1]; 
-   
+    const date = term.value;
+    let dateArr = [];
+    dateArr = date.split("-");  
+    const dateArr2 = new Date(dateArr[0],dateArr[1],dateArr[2]);
+
+    const resultDay = Math.ceil((dateArr2.getTime() -today.getTime()) / (1000 * 3600 * 24));
+
     try{
         const res = await axios({
         method:'post',
-        url: 'http://13.209.77.9:3000/api/auth/register',
+        url: `${CONSTANT.SERVER_ADRESS}/goal`,
         data : {
-            do : goal,
-            year : year,
-            month : month,
-            day : day,
-            time : time,
-            minute : minute 
+            what : goal,
+            year : goalYear,
+            month : goalMonth,
+            day : goalday,
+            left : resultDay 
         }
         })
         console.log('전송완료');
