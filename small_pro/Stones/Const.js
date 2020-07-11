@@ -1,3 +1,3 @@
 const CONSTANT = {
-    SERVER_ADRESS:"http://10.156.145.141:8000"
+    SERVER_ADRESS:"http://13.209.5.215:8000"
 }

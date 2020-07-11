@@ -5,7 +5,6 @@ const form = document.getElementById("form");
 
 
 form.onsubmit = async (e) => {
-    
     e.preventDefault();
     try { 
         const res = await axios({
@@ -25,7 +24,7 @@ form.onsubmit = async (e) => {
         if (res.status === 200)
         window.location.href = "../Main/LoginStateMainUI.html";
     } catch (err) {
-        if(err.response.status === 403) 
+        if(err.response.status === 409) 
             alert("입력정보가 틀렸습니다!");
     }                        
  }
