@@ -40,8 +40,7 @@ btn.onclick = async ()=>{
             }
         })
         if(res.status === 200){
-            console.log(res);
-            // Window.locationhref.href =  "../Main/LoginStateMainUI.html";
+            location.href = "../Main/LoginStateMainUI.html";
         }
         else if(res.status === 500){
             console.log('실패');

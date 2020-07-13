@@ -9,7 +9,11 @@ const passwordFalse = document.getElementById("passwordFalse");
 form.onsubmit = async(e) => {
     e.preventDefault();
 //   location.href='./mainUI.html';
-    try { 
+    try {
+        if(password.value !== passwordCheck.value){
+            passwordFalse.style.opacity = 1;
+            return;
+        } 
         if(password.value === passwordCheck.value){
             passwordFalse.style.opacity = 0;
             const nameValue = name.value;
@@ -22,15 +26,16 @@ form.onsubmit = async(e) => {
                     username : username,
                     password:passwordValue,
                     name : nameValue
+                    }
+                })
+                if(res.status === 200){
+                alert("계정 생성 완료");
+                window.location.href = "../Login/Login.html";
                 }
-            })
-            alert("계정 생성 완료");
-            window.location.href = "../Login/Login.html";
-        }
-        else{
-            passwordFalse.style.opacity = 1;
-        } 
+            }
         }catch(err) {
-            console.log(err);
-    }    
-}
+            if(err.response.status === 409){
+                alert("이미 있는 유저입니다.");
+            }
+        }
+    }   
