@@ -1,26 +1,9 @@
-<!DOCTYPE html>
-<html>
-<body>
-<ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-</ul>
-<ul>
-    <li>sadas</li>
-    <li>asdasd</li>
-</ul>
-<ol>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-</ol>
+<a id="target" href="./demo1.html">ot</a>
 <script>
-    var ul = document.getElementsByTagName('ul')[1];
-    var lis = ul.getElementsByTagName('li');
-    for(var i=0; lis.length; i++){
-        lis[i].style.color='red';   
-    }
+//현재 웹페이지가 http://localhost/webjs/Element/attribute_api/demo3.html 일 때 
+var target = document.getElementById('target');
+// http://localhost/webjs/Element/attribute_api/demo1.html 
+console.log('target.href', target.href);
+// ./demo1.html 
+console.log('target.getAttribute("href")', target.getAttribute("href"));
 </script>
-</body>
-</html>
