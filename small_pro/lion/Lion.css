@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    background-color: rgb(174, 0, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+#head{
+    width: 650px;
+    height: 600px;
+    border: 10px solid black;
+    border-radius: 100%;
+    background:rgb(255, 196, 0) ;
+    transition: 0.25s;
+}
+.ears{
+    display: flex;
+    justify-content: space-between;
+}
+.ear{
+    z-index: -1;
+    border : 10px solid black;
+    border: 100%;
+    width: 200px;
+    height: 180px;
+    border-radius: 100%;
+    background-color:rgb(255, 196, 0);
+}
+#EyeHead{
+    display: flex;
+    justify-content: space-around;
+}
+.Eyebrow{
+    background-color: black;
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    border-top-left-radius:10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#eyes{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.eye{
+    margin-top:10px;
+    background-color: black;
+    border : 0px solid;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+}
+#tail{
+    height: 300px;
+}
+#nose{
+    margin: 0 auto;
+    z-index: 3;
+    margin-top:10px;
+    background-color: black;
+    border : 0px solid;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+}
+.mouth{
+    z-index: 2;
+    height: 50px;
+    width: 80px;
+    border : 10px solid black;
+    border-radius: 100%;
+    background-color: white;
+    
+}
+#mouthID{
+    display: flex;
+    justify-content: center;
+}
+.mouth:nth-child(1) {
+    /* border-right-color: white; */
+    transform: translate(5px);
+}
+.mouth:nth-child(2) {
+    /* border-left-color: white; */
+    transform: translate(-5px);
+}
+#head:hover .eye{
+    transform:scale(1.5,0.3);
+    transition:0.25s;
+    background-color: red;
+}
+#head:hover .Eyebrow{
+    transform: rotate(-20deg);
+    background:linear-gradient(to left, gray, white);   
+    transition: 0.25s;
+}
+
+#old {
+    margin : 0 auto;
+    display : none;
+    background-color:white ;
+    width: 200px;
+    height: 50px;
+    
+}
+
+#head:hover{
+    box-shadow:10px 10px 100px 100px rgb(180, 23, 23);
+    background: linear-gradient(to left, gray, red, black);
+
+}
+#head:hover #img{
+    display: block;
+}
+#head:hover #old{
+    animation: show 1s linear;
+    display: block;
+}
