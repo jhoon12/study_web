@@ -10,42 +10,59 @@ let arr = new Array(8);
 let TextArr = [];
 const clickedArray = [];
 
-function submitPlan(){
-  // if(querySelectorAll(TextArr).forEach((TexArr, index)=> {if(TextArr[index] !== null){
-  //     document.querySelectorAll(".toDoCheck").forEach(async element =>{
-  //       if(element.classList.toggle("active")){
-  //         const time = new Date();
-  //         const year = time.getFullYear();
-  //         const month = time.getMonth();
-  //         const day = time.getDate();
-  //         try{const res = await axios({
-  //           method : 'get',
-  //           url : `${CONSTANT.SERVER_ADRESS}/main`,
-  //           headers:{
-  //             access_token : localStorage.access_token
-  //           },
-  //           body:{
-  //             year,
-  //             month,
-  //             day
-  //           }
-  //         });
-  //         if(res.status === 200)
-  //           console.log('성공');
-  //         }catch(err){
-  //             console.log(err);
-  //             console.log(err.response.status);
-  //         }
-  //       }
-  //     })
-  //   }
-  // })
-  // );
-    const activedInputLength = Array.from(document.querySelectorAll("input.input")).filter(ele => ele.value !== "").length;
-    const activeButtonLength = document.querySelectorAll(".toDoCheck.active").length;
-    console.log(activedInputLength,activeButtonLength);
+async function submitPlan(){
+  const activedInputLength = Array.from(document.querySelectorAll("input.input")).filter(ele => ele.value !== "").length;
+  const activeButtonLength = document.querySelectorAll(".toDoCheck.active").length;
+  const today = new Date();
+  let year = today.getFullYear();
+  let month = today.getMonth() + 1; 
+  let day = today.getDate();   
+      try{
+          if(activeButtonLength === activedInputLength){
+            const res  = await axios({
+              url:`${CONSTANT.SERVER_ADRESS}​/todo/success`,
+              method: 'post',
+              headers:{
+                access_token : localStorage.access_token
+              } ,
+              when:{
+                year,
+                month,
+                day
+              }
+            })
+            console.log('성공')
+          }
+          else{
+            const res  = await axios({
+              url:`${CONSTANT.SERVER_ADRESS}/todo/failed`,
+              method: 'post',
+              headers:{
+                access_token : localStorage.access_token
+              } ,
+              when:{
+                year,
+                month,
+                day
+              }
+            })
+          }
+          console.log('실패')
+        }
+        
+        catch(e){
+          // if(e.response.status === 403){
+          //   Refresh.refresh();
+          //   submitPlan();
+          // }
+          // else if(e.response.status === 500)
+          //   console.log('실패');
+          console.log(e);
+        }
+      }
 
-}
+
+
  
 async function addPlan(){
   document.querySelectorAll(".input").forEach(text => {
@@ -64,7 +81,9 @@ async function addPlan(){
     });
     window.location.reload();
   } catch(err) {
-    console.log(err);
+    if(err.response.status === 403)
+      Refresh.refresh();
+      addPlan();
   }
 }
 
@@ -73,7 +92,8 @@ function changeStyle() {
   this.classList.toggle("active");//클래스가 있으면 추가, 없으면 추가 X
 }
 
-window.onload = async ()=>{
+window.onload = async function onload(){
+  console.log('sad')
   try{
       const res = await axios({
         method : 'get',
@@ -92,6 +112,7 @@ window.onload = async ()=>{
         todoArr[index].innerHTML = `<input class="input" value=${arrElements} >`;
         console.log(todoArr[index]);
       });
+      
         if(res.data.hour < 12){
           TimeText.innerText = `오전 ${res.data.hour}:${res.data.minute}까지 계획을 완료해야 합니다!`;
         }
@@ -107,6 +128,10 @@ window.onload = async ()=>{
     console.log(e);
     if(e.response.status === 500)
       console.log("실패");  
+    else if(e.response.status === 403){
+      Refresh.refresh();
+      onload();
+    }
   }
 }
 

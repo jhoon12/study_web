@@ -5,7 +5,7 @@ const setTime = document.getElementById("SetTime");
 const btn = document.getElementById("btn");
 
 
-btn.onclick = async ()=>{
+btn.onclick = async function setGoal(){
     const setTime = SetTime.value;
     const goal = Goal.value;
 
@@ -27,7 +27,7 @@ btn.onclick = async ()=>{
     try{
         const res = await axios({
         method:'post',
-        url: `http://13.209.5.215:8000/goal`,
+        url: `${CONSTANT.SERVER_ADRESS}/goal`,
         headers : {
             access_token : localStorage.access_token,
         },
@@ -42,11 +42,14 @@ btn.onclick = async ()=>{
         if(res.status === 200){
             location.href = "../Main/LoginStateMainUI.html";
         }
-        else if(res.status === 500){
-            console.log('실패');
-        }
     }catch(err) {
-        console.log(err);
+        if(err.response.status === 500){
+            console.log('실패')
+        }
+        else if(err.response.status === 403){
+            Refresh.refresh();
+            setGoal();
+        } 
     }
  
 };

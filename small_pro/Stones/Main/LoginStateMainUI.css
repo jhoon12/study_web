@@ -152,7 +152,7 @@ html,body{
                 margin : 0 auto;
                 display: block;
                 margin-top: 5px;  
-               
+               cursor: pointer;
             }
 #planBox{
     margin-top: 20px;

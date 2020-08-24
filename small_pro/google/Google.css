@@ -1,0 +1,75 @@
+#head {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px;
+}
+#head * {
+  margin: 10px;
+  height: 30px;
+}
+#head div {
+  padding-top: 5px;
+}
+#body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#logo {
+  transform: translate(0, 70px);
+  width: 350px;
+  margin-bottom: 120px;
+}
+#input {
+  width: 550px;
+  height: 40px;
+  border: 2px solid #e6e6ee;
+  border-radius: 30px;
+  display: flex;
+}
+#search {
+  width: 30px;
+  height: 20px;
+  transform: translate(2px, 9px);
+  margin-right: 10px;
+}
+#searchBar {
+  border: 0;
+  width: 460px;
+}
+#searchBar:focus {
+  outline: none;
+}
+#modal {
+  z-index: 1;
+  height: 400px;
+  left: 82%;
+  width: 250px;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 1rem;
+  overflow: scroll;
+  height: 400px;
+  overflow-x: hidden;
+  opacity: 0;
+}
+.iconBox img {
+  width: 50px;
+}
+.iconList {
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.textList {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  font-size: 10px;
+  padding-left: 15px;
+}
+.textList div {
+  width: 40px;
+}

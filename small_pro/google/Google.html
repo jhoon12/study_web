@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Google.css" />
+    <title>Document</title>
+</head>
+<body >
+    <div id="head">
+        <div id="Mail" onClick=location.href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%3Ftab%3Dwm&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" >Gmail</div>
+        <div onClick= location.href="https://www.google.co.kr/imghp?hl=ko&tab=ri&ogbl">이미지</div>
+        <img src="list.png" id="list"/>
+    </div>
+    <div id="modal">
+        <div class="iconBox">
+            <div class="iconList">
+
+               <img src="009-account.png" onClick=location.href="https://myaccount.google.com/intro?utm_source=OGB&tab=rk&utm_medium=app"></img> 
+               <img src="010-search.png" onClick=location.href="https://www.google.co.kr/webhp?tab=rw"></img>
+               <img src="003-photos.png" onClick=location.href="https://www.google.com/photos/about/"></img>
+            </div>
+            <div class="textList">
+                <div>Google계정</div>
+                <div >검색</div>
+                <div >겔러리</div>
+            </div>
+        </div>
+        <div class="iconBox">
+             <div class="iconList">
+                <img src="012-youtube.png" onClick=location.href="https://www.youtube.com/?gl=KR&tab=w1">
+                <img src="014-gmail.png" onClick=location.href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%3Ftab%3Dwm&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+                <img src="013-news.png" onClick=location.href="https://news.google.com/topstories?tab=wn&hl=ko&gl=KR&ceid=KR:ko">
+            </div>
+            <div class="textList">
+                <div>유튜브</div>
+                <div >메일</div>
+                <div >뉴스</div>
+            </div>
+        </div>
+        <div class="iconBox">
+            <div class="iconList">
+               <img src="001-google maps.png" onClick=location.href="https://www.google.co.kr/maps?hl=ko&tab=wl">
+               <img src="002-adwords.png" onClick=location.href="https://ads.google.com/home/contact-us/?subid=ww-ww-et-g-aw-a-vasquette_ads_1!o2">
+               <img src="004-translate.png" onClick=location.href="https://translate.google.co.kr/?hl=ko&tab=rT">
+           </div>
+           <div class="textList">
+               <div>지도</div>
+               <div >애즈</div>
+               <div >번역</div>
+           </div>
+       </div>
+       <div class="iconBox">
+        <div class="iconList">
+           <img src="005-docs.png" onClick=location.href="https://accounts.google.com/ServiceLogin/signinchooser?service=wise&passive=1209600&continue=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fcreate%3Fusp%3Ddocs_alc&followup=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fcreate%3Fusp%3Ddocs_alc&ltmpl=docs&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+           <img src="006-sheets.png" onClick=location.href="https://accounts.google.com/ServiceLogin/signinchooser?service=wise&passive=1209600&continue=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fcreate%3Fusp%3Ddocs_alc&followup=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fcreate%3Fusp%3Ddocs_alc&ltmpl=docs&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+           <img src="007-slides.png" onClick=location.href="https://accounts.google.com/ServiceLogin/signinchooser?service=wise&passive=1209600&continue=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fcreate%3Fusp%3Ddocs_alc&followup=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fcreate%3Fusp%3Ddocs_alc&ltmpl=docs&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+       </div>
+       <div class="textList">
+           <div>문서</div>
+           <div >스프래드</div>
+           <div >프레젠테이션</div>
+       </div>
+   </div>
+    </div>
+    <form action="https://www.google.com/search" method="GET">
+        <div id="body">
+            <img id="logo" src="logo.PNG"></img>
+            <div id="input">
+                <img src="srarch.PNG" id="search"></img>
+                <input name="q" id="searchBar" placeholder="Google 검색 또는 URL 입력"/>
+                <img src="tool.PNG">
+            </div>
+        </div>
+    </form>
+    <script src="Google.js"></script>
+</body>
+</html>
